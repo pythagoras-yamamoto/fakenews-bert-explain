@@ -23,7 +23,7 @@ class LIMExplainer:
             ref_temp = ref.copy()
             new = ["" for _ in range(len(ref))]
             x = self.tweet_tokenizer.tokenize(x)
-            if ".   ." in x:
+            if ".  ." in x:
                x = [xx if xx != ".   ." else [xxx for xxx in xx.split(" ") if xxx] for xx in x]
                x = [xx for xxx in x for xx in xxx]
             for w in x:
